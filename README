@@ -1,0 +1,18 @@
+# Node GRPC-Gateway
+
+### Getting Started
+
+1. Install protobuf
+    - OSX: `curl -fsSL https://goo.gl/getgrpc | bash -`
+    - Linux: Google it?
+
+2. `npm install`
+3. `npm run test-integration`
+
+### Usage
+
+##### Listing books `curl -X GET http://127.0.0.1:3000/v1/books`
+##### Fetching a book stream `curl -X GET -N http://127.0.0.1:3000/v1/books-stream`
+##### Creating a book `curl -X POST -H 'Content-Type: application/json' -d '{"id": 5, "title": "Moby Dick", "author": "Herman Melville"}' http://127.0.0.1:3000/v1/books`
+
+For extra fun, open 2 terminals and execute the book stream endpoint, and in the other execute the create a book endpoint!
